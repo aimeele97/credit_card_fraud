@@ -4,6 +4,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Neural Network](https://img.shields.io/badge/Neural%20Network-AUC%2097%25-228B22?style=for-the-badge)
+![SMOTE](https://img.shields.io/badge/SMOTE-Oversampling-8A2BE2?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Completed-blue?style=for-the-badge)
 
 </div>

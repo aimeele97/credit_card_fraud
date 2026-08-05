@@ -181,4 +181,4 @@ jupyter notebook notebook.ipynb
 
 ## Results Summary
 
-> A Neural Network model trained using SMOTE oversampling achieved a **ROC-AUC score of 97%** on the test set. The model successfully identified **83 out of 98 fraudulent transactions** while maintaining a balanced trade-off between false positives and false negatives. This demonstrates strong discriminatory power in detecting fraudulent transactions despite severe class imbalance (0.17% fraud rate), highlighting the model's potential for supporting real-world fraud detection systems.
+A Neural Network model trained using SMOTE oversampling achieved a **ROC-AUC score of 97%** on the test set. The model successfully identified **83 out of 98 fraudulent transactions** while maintaining a balanced trade-off between false positives and false negatives. This demonstrates strong discriminatory power in detecting fraudulent transactions despite severe class imbalance, highlighting the model's potential for supporting real-world fraud detection systems.

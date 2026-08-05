@@ -1,6 +1,6 @@
 <div align="center">
 
-# Credit Card Fraud Detection Model
+# Credit Card Fraud Detection
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![SMOTE](https://img.shields.io/badge/SMOTE-Oversampling-8A2BE2?style=for-the-badge)
 ![Model](https://img.shields.io/badge/Model-Multilayer%20Perceptron%20%28MLP%29%20%7C%20AUC%2097%25-228B22?style=for-the-badge)
@@ -61,7 +61,8 @@ credit-card-fraud-detection/
 - Dimensionality reduction visualization using **t-SNE** and **PCA**
   - t-SNE achieved clear visual separation between fraud and non-fraud clusters
   - PCA showed partial but less distinct separation
-
+  
+  ![PCA vs. T-SNE](img/pca_tnse_output.png). 
 ### Step 4: Model Development and Evaluation
 
 #### Classification Models on Undersampled Data
@@ -112,16 +113,12 @@ A 3-layer Neural Network (input → 32 → 2) was trained under both conditions:
 | Model | AUC | Fraud Caught | False Positives |
 |---|---|---|---|
 | Neural Network + SMOTE | **97%** | **83 / 98** | 64 |
-| Logistic Regression + SMOTE | 94.7% | ~90 / 98 | High |
-| Random Undersampling (LR) | 93.1% | ~90 / 98 | Very High |
+| Logistic Regression + SMOTE | 94.7% | 90 / 98 | High - 1399 |
+| Random Undersampling (LR) | 93.1% | 90 / 98 | Very High - 3252 |
 
-### Confusion Matrix Breakdown (Neural Network + SMOTE)
+### Confusion Matrix Breakdown (3-Layer Multilayer Perceptron (MLP) + SMOTE)
 
-```
-                    Predicted Legitimate    Predicted Fraud
-Actual Legitimate        56,800+                  64          ← False Positives
-Actual Fraud                15                    83          ← True Positives
-```
+![nn_output](img/nn_output.png)
 
 - **True Positives (83):** Fraud cases correctly blocked
 - **False Negatives (15):** Fraud cases that bypassed detection

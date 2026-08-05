@@ -1,14 +1,19 @@
+<div align="center">
+
 # Credit Card Fraud Detection Model
 
-A machine learning project that builds and evaluates multiple models for detecting fraudulent credit card transactions, with a focus on handling severe class imbalance using undersampling and oversampling techniques.
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Neural Network](https://img.shields.io/badge/Neural%20Network-AUC%2097%25-228B22?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-blue?style=for-the-badge)
 
----
+</div>
+
+> Credit card fraud causes billions in losses for the finance industry each year. This project explores how machine learning can help detect fraudulent transactions automatically, even when fraud cases make up less than 0.2% of all transactions. The core challenge is not building a model, but making it work reliably when the data is extremely imbalanced. This project tests multiple approaches to handle this imbalance, compares what works and what does not, and ends up with a neural network trained on oversampled data that achieves 97% AUC and catches 83 out of 98 real fraud cases on completely unseen data.
+
 
 ## Project Overview
 
 This project uses real credit card transaction data collected over two days in Europe to develop a fraud detection system. Transactions flagged as high risk can be blocked or sent for additional verification before processing. Neural Network trained with SMOTE oversampling achieved a highest **ROC-AUC score of 97%** compared to other models on the test set, successfully identifying **83 out of 98 fraudulent transactions** while minimizing false alerts.
-
----
 
 ## Dataset
 
@@ -24,7 +29,6 @@ This project uses real credit card transaction data collected over two days in E
 
 > **Note:** The dataset is severely imbalanced (~99.8% vs ~0.2%), which is the central challenge addressed throughout this project. Features V1–V28 have already been transformed via PCA for confidentiality. Only `Time` and `Amount` required additional scaling.
 
----
 
 ## Project Structure
 
@@ -104,8 +108,6 @@ A 3-layer Neural Network (input → 32 → 2) was trained under both conditions:
 
 **Neural Network with SMOTE was the best performing model overall.**
 
----
-
 ## Final Results
 
 | Model | AUC | Fraud Caught | False Positives |
@@ -126,8 +128,6 @@ Actual Fraud                15                    83          ← True Positives
 - **False Negatives (15):** Fraud cases that bypassed detection
 - **False Positives (64):** Legitimate transactions incorrectly flagged
 
----
-
 ## Business Impact
 
 | Outcome | Implication |
@@ -137,8 +137,6 @@ Actual Fraud                15                    83          ← True Positives
 | 15 missed fraud cases | Unavoidable trade-off; represents ~15% miss rate on fraud |
 | Low false positive rate | Fraud investigation team focuses on high-probability cases only |
 
----
-
 ## Key Findings
 
 1. **Data leakage is the biggest risk**: undersampling before the train-test split inflates performance metrics and produces models that fail on real data
@@ -146,8 +144,6 @@ Actual Fraud                15                    83          ← True Positives
 3. **Neural Networks generalize better** than logistic regression on this task when combined with SMOTE
 4. **t-SNE confirms separability**: the features contain genuine discriminative signal between fraud and non-fraud
 5. **Recall is more important than precision** in fraud detection, missing a fraud case is more costly than a false alarm
-
----
 
 ## Libraries Used
 
@@ -159,8 +155,6 @@ imbalanced-learn       — SMOTE, NearMiss, imbalanced pipeline
 keras / tensorflow     — neural network
 scipy                  — statistical distributions
 ```
-
----
 
 ## How to Run
 
@@ -175,8 +169,6 @@ pip install pandas numpy matplotlib seaborn scikit-learn imbalanced-learn tensor
 jupyter notebook notebook.ipynb
 ```
 
----
-
 ## Future Improvements
 
 - Expand dataset to capture wider range of fraud patterns across geographies and time periods
@@ -185,8 +177,6 @@ jupyter notebook notebook.ipynb
 - Ensemble methods: stacking or blending multiple models for improved robustness
 - Interactive threshold optimization dashboard for business stakeholders to tune the precision-recall trade-off
 - Reinforcement learning approaches for real-time adaptation to evolving fraud patterns
-
----
 
 ## Results Summary
 

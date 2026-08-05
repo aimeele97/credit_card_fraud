@@ -1,15 +1,13 @@
 <div align="center">
 
 # Credit Card Fraud Detection Model
-
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Neural Network](https://img.shields.io/badge/Neural%20Network-AUC%2097%25-228B22?style=for-the-badge)
 ![SMOTE](https://img.shields.io/badge/SMOTE-Oversampling-8A2BE2?style=for-the-badge)
+![Model](https://img.shields.io/badge/Model-Multilayer%20Perceptron%20%28MLP%29%20%7C%20AUC%2097%25-228B22?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Completed-blue?style=for-the-badge)
-
 </div>
 
-> Credit card fraud causes billions in losses for the finance industry each year. This project explores how machine learning can help detect fraudulent transactions automatically, even when fraud cases make up less than 0.2% of all transactions. The core challenge is not building a model, but making it work reliably when the data is extremely imbalanced. This project tests multiple approaches to handle this imbalance, compares what works and what does not, and ends up with a neural network trained on oversampled data that achieves 97% AUC and catches 83 out of 98 real fraud cases on completely unseen data.
+> Credit card fraud causes billions in losses for the finance industry each year. This project explores how machine learning can help detect fraudulent transactions automatically, even when fraud cases make up less than ~0.2% of all transactions. The core challenge is not building a model, but making it work reliably when the data is extremely imbalanced. This project tests multiple approaches to handle this imbalance, compares what works and what does not, and ends up with a **neural network trained on oversampled data** that achieves **97% AUC** and catches 83 out of 98 real fraud cases on completely unseen data.
 
 
 ## Project Overview
